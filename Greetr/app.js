@@ -1,4 +1,11 @@
 var g = G$("John", "Doe");
-console.log(g.getFullName());
+console.log(g.fullName);
 
-console.log(G$.makeGreet(g,"Hi! How are you?"));
+g.greet().setLang("es").greet(true);
+
+
+$('#login').click(function(){
+  var loginGrtr = G$('John','Doe');
+  $('#logindiv').hide();
+  loginGrtr.setLang($('#lang').val()).HTMLGreeting('#greeting',true).log();
+});
