@@ -1,3 +1,4 @@
+// Object Literals and Json Type and parsing and stringifying
 // var objectLiteral = {
 //   firstname : "Armagan",
 //   isAProgrammer : true
@@ -45,6 +46,7 @@ in the creation phase, pleaces the functions into the memory and declare them an
 The variables in the memory don't have a value different from "undefined" until the they are executed in the execution phase. So if you try to call the
 anonymousGreet before setting the variable you have an error that says "undefined" is not a function. */
 
+// Passing a function as a parameter!
 function log(a){
   a();
 }

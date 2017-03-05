@@ -14,8 +14,8 @@ var john = {
 }
 
 
-john.__proto__ = person;
-// console.log(john.getFullName());
+john.__proto__ = person; // Not a suggested way, We are using it here just for understanding
+console.log(john.getFullName());
 
 for (var prop in john) {
   if (john.hasOwnProperty(prop)) {
@@ -27,7 +27,7 @@ for (var prop in john) {
 var jane = {
   address : "111 Main Street",
   getFormalFullName : function(){
-    return thi.lastName + ", " + this.firstName
+    return this.lastName + ", " + this.firstName
   }
 }
 
@@ -37,10 +37,7 @@ var jim = {
   }
 }
 
-_.extend(john,jane,jim);
 
 console.log(john);
 jane.__proto__ = person;
-// console.log(jane.getFullName());
-
-/////
+console.log(jane.getFullName());

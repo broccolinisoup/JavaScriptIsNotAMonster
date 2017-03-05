@@ -21,7 +21,7 @@ Person.prototype.getFormalFullName = function(){
 // We could also add this getFormalFullName method inside of the function.
 // However,if we do so, when we create an object every time, the method also will
 // be created which means takes more space in the memory but if we add this method to the prototype
-// itt means created only once for all the objects that you created.
+// it means that it will be created only once for all the objects that you created.
 
 
 console.log(john);
@@ -34,4 +34,4 @@ String.prototype.isGreaterThanTheLimit = function(limit){
 
 console.log("Armagan".isGreaterThanTheLimit(13));
 
-// Js automatocally box the primitive values into the objects. Here i a usage.
+// Js automatocally box the primitive values into the objects. Here is a usage.

@@ -1,10 +1,16 @@
+//GLOBAL EXECUTION CONTEXT, HOISTING
+
 // Article : https://medium.com/@broccolinisoup/do-we-really-know-how-javascript-works-329c800778ac#.wodb2ce5u
 
 /*
-Global execution context is created by the js engine and it decides the value of "this" depends on where your js code is executed.
+Global execution context is created by the js engine and it decides the value of global "this", depends on where your js code is executed.
 For example if you run your code on browser, your global object is window.
-Each window has an execution context which means each window has a global object. At this case; "window" equals "this"
+Each window has an execution context which means each window has a global object. At this case; "window" equals "this".
 If you define a global variable which means not inside a function, it belongs to global object.
+//// Example ////
+var myName  = "Amy";
+console.log(window.myname); // Output is :  Amy.
+console.log(this.myname); // Output is :  Amy.
 
 Hoisting :
 Because variable declarations (and declarations in general) are processed before any code is executed,
@@ -29,10 +35,17 @@ var myVar = 1;
 console.log(myVar);
 a();
 console.log(myVar);
-//When the creation phase is finished, We are in the global execution context, so var is 1. Then a is called and another execution context is created.
+
+/*
+Console log:
+1
+2
+undefined
+1
+*/
+//When the creation phase is finished, We are in the global execution context, so myVar is 1 Then a is called and another execution context is created.
 //In this execution context there is another myVar variable which equals to 2.  Inside in the a function, b is called and another execution context
 //is created. In this execution context, there is another myVar variable which is undefined. So there are variable environments. When the function is done, its execution stach is top off.
-
 
 // Example 2
 
@@ -74,6 +87,7 @@ else {
 Uncought error : a is not defined
 
 ** Because js machine in the browser says "hey I don't have any var a in my memory"
+It is supposed to be declared. var a =5 for example.
 */
 
 /* So execution context is created in 2 phases.
@@ -106,22 +120,24 @@ but when the first phase of execution context, there is hoisting which settings 
 
 /*
 Anytime you invoke a function, a new execution context will be created and put on the execution stack. (the new execution context has a creation and an execution phase)
+
 Stack :
 b execution
 a execution
 global execution
 */
 
-function a(){
-  b();
-  var c;
-}
+// function a(){
+//   b();
+//   var c;
+// }
+//
+// function b(){
+//   var d;
+// }
+// a();
+// var d;
 
-function b(){
-  var d;
-}
-a();
-var d;
 
 // Example 5
 function b(){

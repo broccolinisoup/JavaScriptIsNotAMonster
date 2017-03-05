@@ -1,25 +1,24 @@
 // // ARRAYS
-// var arr = [
-//   1,
-//   false,
-//   {
-//     name : 'Tony',
-//     address : '111 Main St'
-//   },
-//   function(name){
-//     var greeting = 'Hello ';
-//     console.log(greeting + name);
-//   },
-//   "hello"
-// ];
-//
-// console.log(arr);
-// arr[3](arr[2].name); // This is just sooo strange! :)
-//
-//
+// You can put whatever you want into the array regardless of their type
+var arr = [
+  1,
+  false,
+  {
+    name : 'Tony',
+    address : '111 Main St'
+  },
+  function(name){
+    var greeting = 'Hello ';
+    console.log(greeting + name);
+  },
+  "hello"
+];
+
+console.log(arr);
+arr[3](arr[2].name); // This is just sooo strange! :)
+
 // ////////////////////////////////////////////////////////
-//
-// //// ARGUMENTS
+// //  ARGUMENTS
 //
 // function greet(firstname, lastname, language){
 //   // function greet(firstname, lastname, language, ...other){ next version of Js you can add more parameter
@@ -47,7 +46,6 @@
 // greet('Arm', 'Ersoz', 'en','Brisbane');
 
 ////////////////////////////////////////////////////////
-
 
 // IIFE (Immidiately invoked function expressions)
 //
